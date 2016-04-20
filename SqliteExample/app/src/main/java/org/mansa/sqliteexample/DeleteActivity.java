@@ -19,7 +19,7 @@ public class DeleteActivity extends Activity {
     Button mDelBtn;
     EditText mPassword;
     String password;
-     DatabaseOPerations DOP;
+     DatabaseOperations DOP;
     Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class DeleteActivity extends Activity {
             public void onClick(View v) {
                password = mPassword.getText().toString();
 
-                DOP = new DatabaseOPerations(context);
+                DOP = new DatabaseOperations(context);
                 Cursor CR = DOP.getUSerPassword(DOP, USER_NAME);
                 CR.moveToFirst();
                 boolean loginstatus = false;

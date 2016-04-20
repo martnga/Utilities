@@ -43,7 +43,7 @@ public class Register extends Activity{
                 }else{
 
 
-                    DatabaseOPerations DB = new DatabaseOPerations(context);
+                    DatabaseOperations DB = new DatabaseOperations(context);
                     DB.saveInfo(DB, usernametext, userpassword_txt);
                     Toast.makeText(getBaseContext(), "Registration Success", Toast.LENGTH_LONG).show();
                     finish();

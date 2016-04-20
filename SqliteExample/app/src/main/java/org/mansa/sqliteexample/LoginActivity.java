@@ -41,7 +41,7 @@ public class LoginActivity  extends Activity{
                    username = mLoginUserText.getText().toString();
                    password = mLoginUserPasswordText.getText().toString();
 
-                    DatabaseOPerations DOP = new DatabaseOPerations(context);
+                    DatabaseOperations DOP = new DatabaseOperations(context);
                     Cursor CR = DOP.getInformation(DOP);
                     CR.moveToFirst();
                     boolean loginstatus = false;
@@ -70,7 +70,7 @@ public class LoginActivity  extends Activity{
                     username = mLoginUserText.getText().toString();
                     password = mLoginUserPasswordText.getText().toString();
 
-                    DatabaseOPerations DOP = new DatabaseOPerations(context);
+                    DatabaseOperations DOP = new DatabaseOperations(context);
                     Cursor CR = DOP.getInformation(DOP);
                     CR.moveToFirst();
                     boolean loginstatus = false;
