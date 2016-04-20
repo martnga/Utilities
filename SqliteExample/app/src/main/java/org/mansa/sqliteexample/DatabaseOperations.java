@@ -84,6 +84,15 @@ public class DatabaseOperations extends SQLiteOpenHelper {
         SQ.delete(TableData.TableInfo.TABLE_NAME, selection, args);
     }
 
+
+    /*
+    Get the Column Index
+    cursor.moveToFirst();
+    long itemId = cursor.getLong(
+            cursor.getColumnIndexOrThrow(FeedEntry._ID)
+    );*/
+
+
     public void updateUser(DatabaseOperations  DOP, String newUserName, String oldUserName){
         SQLiteDatabase db = DOP.getReadableDatabase();
 
@@ -97,7 +106,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
 
         // Which row to update, based on the ID
         String selection =  TableData.TableInfo.USER_NAME + " LIKE ?";
-        String[] selectionArgs = { oldUserName};
+        String[] selectionArgs = { oldUserName };
 
         int count = db.update(
                 TableData.TableInfo.TABLE_NAME,
